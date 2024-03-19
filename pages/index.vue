@@ -1,5 +1,9 @@
 <template>
   <div>
+    <h1>Check out the Blinkist app</h1>
+
+    <img width="300" src="../assets/static/images/P5ST-hero_image.jpg" alt="Check out the Blinkist app" />
+
     <AbTest />
     <Signup />
   </div>

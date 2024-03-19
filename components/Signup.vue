@@ -1,6 +1,7 @@
 <template>
   <div>
-    <a id="signup" href="#" @click="handleClickSignup">Sign up</a>
+    Thanks a lot for reading the article!
+    <a id="signup" href="#" @click="handleClickSignup">SIGN UP</a> for Blinkist.
   </div>
 </template>
 

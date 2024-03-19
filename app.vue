@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 useHead({
-  title: 'AbTest',
+  title: 'Parcel Sandbox',
 })
 const name = ref('')
 </script>

@@ -1,5 +1,15 @@
+<script setup lang="ts">
+
+useHead({
+  title: 'AbTest',
+})
+const name = ref('')
+</script>
+
 <template>
   <div>
-    <NuxtWelcome />
+    <nuxtLayout>
+      <NuxtPage />
+    </nuxtLayout>
   </div>
 </template>

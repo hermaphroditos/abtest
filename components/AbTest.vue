@@ -2,12 +2,12 @@
   <div v-if="isLoading"></div>
   <div v-else-if="isVariantA">
     <!-- Control variation -->
-    Meet the app that revolutionized reading.
+    {{ $t('text_01_a') }}
   </div>
 
   <div v-else>
     <!-- Test variation -->
-    Meet the app that has 18 million users.
+    {{ $t('text_01_b') }}
   </div>
 </template>
 

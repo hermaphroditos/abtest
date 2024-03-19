@@ -3,7 +3,8 @@ export default defineI18nConfig(() => ({
   locale: 'en',
   messages: {
     en: {
-      welcome: 'Welcome'
+      text_01_a: 'Meet the app that revolutionized reading.',
+      text_01_b: 'Meet the app that has 18 million users.',
     },
   }
 }))

@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxtjs/i18n": "^8.2.0",
     "@pinia/nuxt": "^0.5.1",
     "eslint": "^8.57.0",
     "nuxt": "^3.11.1",
@@ -20,7 +21,6 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "@nuxtjs/i18n": "^8.1.1",
     "@vueuse/nuxt": "^10.9.0"
   }
 }

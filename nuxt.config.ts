@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/i18n', '@pinia/nuxt',],
   i18n: {
-    vueI18n: './i18n/i18n.config.ts'
+    vueI18n: './I18n/i18n.config.ts'
   },
   css: ['@/assets/static/css/style.css'],
 })

@@ -17,6 +17,7 @@ const { $trackPageview } = useNuxtApp();
 // Initializes the guest store to manage and access the guest state
 const guestStore = useGuestStore();
 const guest_ = guestStore.guest_;
+const pageviews = guestStore.pageviews_;
 
 // Lifecycle hook: Executes the provided function after the component is mounted to the DOM
 onMounted(() => {
@@ -26,7 +27,7 @@ onMounted(() => {
     window.sessionStorage.setItem('previousUrl', window.location.href);
 
     // @ts-ignore
-    $trackPageview(guest_); // Tracks the pageview event for the current guest
+    $trackPageview(guest_, pageviews_); // Tracks the pageview event for the current guest
   });
 });
 

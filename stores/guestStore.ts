@@ -3,16 +3,11 @@ import { useGuest } from '@/composables/guest';
 import type { Guest } from '@/types/guest.interface';
 
 export const useGuestStore = defineStore('guestStore', () => {
-  const { guest_, incrementPageviews } = useGuest();
-
-  const setGuestState = (newValue: Guest) => {
-    guest_.value = newValue;
-    incrementPageviews();
-  };
+  const { guest_, pageviews_, incrementPageviews } = useGuest();
 
   return {
     guest_,
+    pageviews_,
     incrementPageviews,
-    setGuestState,
   };
 });

@@ -6,7 +6,7 @@ import type { Guest } from '~/types/guest.interface';
  * Send as params whatever you might seem valuable to send.
  * The URL is probably a good start though.
  */
-const trackPageview = async (guest: Guest) => {
+const trackPageview = async (guest: Guest, pageviews: number) => {
   const pageviewData: {
     uuid: string;
     url: string;
@@ -21,7 +21,7 @@ const trackPageview = async (guest: Guest) => {
   } = {
     uuid: guest.uuid,
     url: guest.url,
-    pageviews: guest.pageviews,
+    pageviews: pageviews,
     variantLetter: guest.variantLetter,
     title: document.title,
     timestamp: new Date().toISOString(),
@@ -39,7 +39,7 @@ const trackPageview = async (guest: Guest) => {
    * Send as params whatever you might seem valuable to send.
    * The URL and an event name are probably a good start though.
    */
-const trackEvent = async (guest: Guest, e: Event) => {
+const trackEvent = async (guest: Guest, pageviews: number, e: Event) => {
   
   // use localstorage to prevent double tracking of the signup event
   const hasTrackedSignup = localStorage.getItem('trackedSignup');
@@ -64,7 +64,7 @@ const trackEvent = async (guest: Guest, e: Event) => {
   } = {
     uuid: guest.uuid,
     url: guest.url,
-    pageviews: guest.pageviews,
+    pageviews: pageviews,
     signupEvent: 1, 
     variantLetter: guest.variantLetter,
     title: document.title,

@@ -15,12 +15,22 @@ export function useGuest() {
       default: () => ({
         uuid: `${Math.random().toString(16).substring(2, 10)}-${Math.random().toString(16).substring(2, 6)}-${Math.random().toString(16).substring(2, 6)}-${Math.random().toString(16).substring(2, 6)}-${Math.random().toString(16).substring(2, 14)}`,
         url: '',
-        pageviews: 0,
         variantLetter: Math.random() > 0.5 ? 'a' : 'b'
       }),
       maxAge: 365 * 24 * 60 * 60 * 1000,
     }
   );
+
+  /** 
+   * Pageviews
+   */
+    const pageviews_ = useCookie<number>(
+      'pageviews_cookie',
+      {
+        default: () => 0,
+        maxAge: 365 * 24 * 60 * 60 * 1000,
+      }
+    );
 
   /** 
    * Increase Pageviews
@@ -31,8 +41,7 @@ export function useGuest() {
       console.log(guest_.value)
       // if the previous URL is different from the current URL, increment pageviews
       if (window.sessionStorage.getItem('previousUrl') !== window.location.href) {
-        // (guest_.value as { pageviews: number }).pageviews += 1;
-        guest_.value.pageviews += 1;
+        pageviews_.value += 1;
   
         // Update previous URL
         nextTick(() => {
@@ -44,6 +53,7 @@ export function useGuest() {
 
   return {
     guest_,
+    pageviews_,
     incrementPageviews,
   };
 }

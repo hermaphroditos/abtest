@@ -41,4 +41,5 @@ docker build -t abtest .
 docker run -p 3000:3000 abtest
 ```
 
-* URL: http://localhost:3000
+* Demo URL: https://aphroditos.com/
+* Local URL: http://localhost:3000

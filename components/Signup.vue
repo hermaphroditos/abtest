@@ -1,7 +1,7 @@
 <template>
   <div>
     Thanks a lot for reading the article!
-    <a id="signup" :href="`/signup`" @click="handleClickSignup">SIGN UP</a> for Blinkist.
+    <a id="signup" href="#" @click="handleClickSignup">SIGN UP</a> for Blinkist.
   </div>
 </template>
 
